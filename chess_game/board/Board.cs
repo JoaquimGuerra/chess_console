@@ -4,7 +4,7 @@
 	{
 		public int rows { get; private set; }
 		public int columns { get; private set; }
-		public Piece[,] pieces;
+		private Piece[,] pieces;
 
 
 		public Board(int _rows, int _cols)
@@ -12,6 +12,11 @@
 			this.rows = _rows;
 			this.columns = _cols;
 			this.pieces = new Piece[_rows, _cols];
+		}
+
+		public Piece piece(int x, int y)
+		{
+			return (this.pieces[x,y]);
 		}
 	}
 }
