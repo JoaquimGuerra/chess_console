@@ -18,5 +18,11 @@
 		{
 			return (this.pieces[x,y]);
 		}
+
+		public void insertPiece(Piece p, Position pos)
+		{
+			this.pieces[pos.row, pos.column] = p;
+			p.pos = pos;
+		}
 	}
 }
