@@ -10,8 +10,15 @@ namespace chess_game
 		{
 			Board b = new Board(8, 8);
 
-			b.insertPiece(new Tower(b, Color.White), new Position(0, 0));
-			b.insertPiece(new King(b, Color.White), new Position(1, 3));
+			try
+			{
+				b.insertPiece(new Tower(b, Color.White), new Position(0, 0));
+				b.insertPiece(new King(b, Color.White), new Position(0, 0));
+			}
+			catch (Exception e)
+			{
+				Console.WriteLine(e.Message);
+			}
 
 			Screen.printBoard(b);
 

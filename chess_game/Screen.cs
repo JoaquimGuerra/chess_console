@@ -11,7 +11,7 @@ namespace chess_game
 			{
 				for (int j = 0; j < board.columns; j++)
 				{
-					Piece p = board.piece(i,j);
+					Piece p = board.piece(new Position(i,j));
 
 					if (p == null)
 					{
@@ -19,7 +19,7 @@ namespace chess_game
 					}
 					else
 					{
-						Console.Write(board.piece(i, j) + " ");
+						Console.Write(p + " ");
 					}
 				}
 				Console.WriteLine();
